@@ -6,7 +6,7 @@
     <title>IEEE Computer Society</title>
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#ffffff" />
-    <script defer="" src="client.js"></script>
+    <script defer="" src="stop-client.js"></script>
     <style>
       body,
       html {
@@ -22,8 +22,8 @@
         justify-content: center;
       }
 
-      .largeText{
-        fontSize:20px
+      .large-text{
+        font-size:16px;
        }
 
       .light {
@@ -44,9 +44,13 @@
 
       .f1-lights {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         position: relative;
-        width: 100%;
-        max-width: 520px;
+        /* width: 60%; */
+        width: 40%;
+        /* max-width: 50%; */
+        
       }
 
       .light-strip {
@@ -83,8 +87,8 @@
       }
 
       .time {
-        font-size: 90px;
-        font-size: 12vw;
+        font-size: 64px;
+        /* font-size: 12vw; */
         line-height: 1;
         margin: 1rem;
         text-transform: uppercase;
@@ -112,51 +116,134 @@
       a:link {
         text-decoration: none;
       }
+
+      .leaderboard {
+        background-color: #011e4b;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 25%;
+        z-index: 200;
+        border-top-right-radius: 100px;
+        opacity: 0.92;
+      }
+
+      .game-area {
+        position: fixed;
+        background-color: white;
+        height: 70%;
+        bottom: 0;
+        right: -80px;
+        left: 25%;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        border-top-right-radius: 200px;
+        padding-right: 150px;
+      }
+
+      .red-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 25%;
+        background-color: #ff1b48;
+        z-index: 50;
+      }
+
+      .background-pattern {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            justify-content: space-between;
+        }
+        .background-pattern-grid {
+            width: 6%;
+            background-color: pink;
+        }
+
+
     </style>
   </head>
 
   <body>
-    <div class="f1-lights">
-      <div class="back-board"></div>
-      <div class="light-strip">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-      </div>
-      <div class="light-strip">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-      </div>
-      <div class="light-strip">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-      </div>
-      <div class="light-strip">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-      </div>
-      <div class="light-strip">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-      </div>
+    
+    <div class = "leaderboard">
+      leaderboard
     </div>
 
-    <p class="largeText">
-      Tap/click when you're ready to race, then tap again when the lights go
-      out.
-    </p>
+    <main class = "game-area">
+      <div class="f1-lights">
+        <div class="back-board"></div>
+        <div class="light-strip">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+        <div class="light-strip">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+        <div class="light-strip">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+        <div class="light-strip">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+        <div class="light-strip">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+      </div>
+  
+      <p class="large-text">
+        Tap/click when you're ready to race, then tap again when the lights go
+        out.
+      </p>
+  
+      <div class="results">
+        <div class="time">00.000</div>
+      </div>  
+    </main>
 
-    <div class="results">
-      <div class="time">00.000</div>
-    </div>
+
+    <div class = "red-sidebar"></div>
+
+
+    <div class = "background-pattern">
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+      <div class = "background-pattern-grid"></div>
+  </div>
   </body>
 </html>
