@@ -47,7 +47,7 @@ body {
   position: relative;
   /* width: 60%; */
   width: 30%;                /*changed width*/
-  left: 7%;                  /* added herre*/
+  left: 7%;                  /* added here*/
   /* max-width: 50%; */
   
 }
@@ -160,7 +160,7 @@ a:link {
   justify-content: end;
   border-top-right-radius: 200px;
   padding-right: 150px;
-  /*box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32);*/
+  box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32);   /*added shadow to game-area*/
 }
 .dots-grp {
   z-index:100;
@@ -237,3 +237,14 @@ a:link {
 
 }
 
+.ieee-logo {
+  z-index: 200;
+}
+
+.ieee-logo-img {
+  height: 100px;
+  flex-shrink: 0;
+  position: absolute;  
+  left: calc(50% - 148px/2);
+  top: 50px;
+}
