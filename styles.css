@@ -160,7 +160,7 @@ a:link {
   justify-content: end;
   border-top-right-radius: 200px;
   padding-right: 150px;
-  /*box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32);*/
+  box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32);   /*added shadow to game-area*/
 }
 
 .red-sidebar {
@@ -228,4 +228,16 @@ a:link {
 
 .input-clear-button {
 
+}
+
+.ieee-logo {
+  z-index: 200;
+}
+
+.ieee-logo-img {
+  height: 100px;
+  flex-shrink: 0;
+  position: absolute;  
+  left: calc(50% - 148px/2);
+  top: 50px;
 }
