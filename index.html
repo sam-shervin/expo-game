@@ -6,182 +6,61 @@
     <title>IEEE Computer Society</title>
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#ffffff" />
-    <script defer="" src="stop-client.js"></script>
-    <style>
-      body,
-      html {
-        height: 100%;
-        font-family: sans-serif;
-        overflow: hidden;
-      }
-
-      body {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .large-text{
-        font-size:16px;
-       }
-
-      .light {
-        border-radius: 100%;
-        background: #222;
-        margin: 10px;
-      }
-
-      .light::before {
-        content: "";
-        display: block;
-        padding-top: 100%;
-      }
-
-      .light-strip.on .light:nth-child(1n + 3) {
-        background: red;
-      }
-
-      .f1-lights {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        /* width: 60%; */
-        width: 40%;
-        /* max-width: 50%; */
-        
-      }
-
-      .light-strip {
-        background: black;
-        border-radius: 11px;
-        margin: 0 2px;
-        position: relative;
-        flex: 1;
-      }
-
-      @media (min-width: 435px) {
-        .light-strip {
-          margin: 0 5px;
-          border-radius: 14px;
-        }
-      }
-
-      .back-board {
-        position: absolute;
-        left: 5px;
-        right: 5px;
-        top: 50%;
-        height: 5%;
-        background: #000;
-        transform: translateY(-50%);
-      }
-
-      p {
-        font-size: 18px;
-        text-align: center;
-        line-height: 1.4;
-        margin: 1em;
-        margin-bottom: 0;
-      }
-
-      .time {
-        font-size: 64px;
-        /* font-size: 12vw; */
-        line-height: 1;
-        margin: 1rem;
-        text-transform: uppercase;
-        will-change: transform;
-        text-align: center;
-      }
-
-      .time.anim {
-        animation: bang 0.1s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-
-      .best,
-      .credit {
-        font-size: 18px;
-        text-align: center;
-        line-height: 1.4;
-      }
-
-      @keyframes bang {
-        from {
-          transform: scale(2);
-        }
-      }
-
-      a:link {
-        text-decoration: none;
-      }
-
-      .leaderboard {
-        background-color: #011e4b;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        width: 25%;
-        z-index: 200;
-        border-top-right-radius: 100px;
-        opacity: 0.92;
-      }
-
-      .game-area {
-        position: fixed;
-        background-color: white;
-        height: 70%;
-        bottom: 0;
-        right: -80px;
-        left: 25%;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: end;
-        border-top-right-radius: 200px;
-        padding-right: 150px;
-      }
-
-      .red-sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 25%;
-        background-color: #ff1b48;
-        z-index: 50;
-      }
-
-      .background-pattern {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: white;
-            justify-content: space-between;
-        }
-        .background-pattern-grid {
-            width: 6%;
-            background-color: pink;
-        }
-
-
-    </style>
+    <script defer="" src="client.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+    
   </head>
 
   <body>
     
+    
     <div class = "leaderboard">
-      leaderboard
+      <div>
+        <p class = "leaderboard-text">LEADERBOARD</p>
+      </div>
+      <div class = "leaderboard-rank">
+        <p class = "leaderboard-rank-num">1.</p>
+        <p class = "leaderboard-rank-name"> sampletext</p>
+        <p class = "leaderboard-time">0.025s</p>
+      </div>
+      <div class = "leaderboard-rank">
+        <p class = "leaderboard-rank-num">2.</p>
+        <p class = "leaderboard-rank-name"> sampletext</p>
+        <p class = "leaderboard-time">0.025s</p>
+      </div>
+      <div class = "leaderboard-rank">
+        <p class = "leaderboard-rank-num">3.</p>
+        <p class = "leaderboard-rank-name"> sampletext</p>
+        <p class = "leaderboard-time">0.025s</p>
+      </div>
+      <div class = "leaderboard-rank">
+        <p class = "leaderboard-rank-num">4.</p>
+        <p class = "leaderboard-rank-name"> sampletext</p>
+        <p class = "leaderboard-time">0.025s</p>
+      </div>
+      <div class = "leaderboard-rank">
+        <p class = "leaderboard-rank-num">5.</p>
+        <p class = "leaderboard-rank-name"> sampletext</p>
+        <p class = "leaderboard-time">0.025s</p>
+      </div>
     </div>
 
     <main class = "game-area">
+      <div class = "background-pattern">           
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main"></div>
+        <div class = "background-pattern-grid-main "></div>
+        <div class = "background-pattern-grid-main "></div>
+        <div class = "background-pattern-grid-main "></div>
+        <div class = "background-pattern-grid-main "></div> 
+    </div>
       <div class="f1-lights">
         <div class="back-board"></div>
         <div class="light-strip">
@@ -217,8 +96,7 @@
       </div>
   
       <p class="large-text">
-        Tap/click when you're ready to race, then tap again when the lights go
-        out.
+        TAP/CLICK Anywhere to start and click again when lights go out.
       </p>
   
       <div class="results">
@@ -226,9 +104,25 @@
       </div>  
     </main>
 
-
+    <table style="z-index: 100;">
+      <tr>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+      </tr>
+      <tr>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+        <td><img src="Ellipse 11.png"></td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+    
     <div class = "red-sidebar"></div>
-
 
     <div class = "background-pattern">
       <div class = "background-pattern-grid"></div>
@@ -244,6 +138,14 @@
       <div class = "background-pattern-grid"></div>
       <div class = "background-pattern-grid"></div>
       <div class = "background-pattern-grid"></div>
+  </div>
+
+
+  <div class = "name-input-box">
+    <img class = "name-input-logo" src = "ieeecs-logo.png">
+    <p class = "name-input-text">Enter your name</p>
+    <input class = "name-input" type = "text">
+    <img class = "input-clear-image" src = "clear.png">
   </div>
   </body>
 </html>
