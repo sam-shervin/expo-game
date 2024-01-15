@@ -1,8 +1,20 @@
+@font-face {
+  font-family: Formula1;
+  src: url(fonts/Formula1-Regular-1.ttf);
+}
+
+@font-face {
+  font-family: Formula1-bold;
+  src: url(fonts/Formula1-Bold_web.ttf);
+}
+
 body,
 html {
   height: 100%;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   overflow: hidden;
+  font-family: "Formula1-bold";
+  font-weight: 500;
 }
 
 body {
@@ -12,16 +24,18 @@ body {
   justify-content: center;
 }
 
-.large-text{
-  font-size:16px;
+.large-text {
+  font-size: 16px;
   font-weight: bold;
-  position: relative;  /*added*/
-  left:7%;             /*added*/
- }
+  position: relative;
+  /*added*/
+  left: 7%;
+  /*added*/
+}
 
 .results {
   position: relative;
-  left:7%;
+  left: 7%;
 }
 
 .light {
@@ -46,10 +60,12 @@ body {
   justify-content: center;
   position: relative;
   /* width: 60%; */
-  width: 30%;                /*changed width*/
-  left: 7%;                  /* added here*/
+  width: 30%;
+  /*changed width*/
+  left: 7%;
+  /* added here*/
   /* max-width: 50%; */
-  
+
 }
 
 .light-strip {
@@ -86,8 +102,8 @@ p {
 }
 
 .time {
-  font-size: 64px;
-  /* font-size: 12vw; */
+  /* font-size: 64px; */
+  font-size: 8vw;
   line-height: 1;
   margin: 1rem;
   text-transform: uppercase;
@@ -134,6 +150,7 @@ a:link {
   color: white;
   text-decoration: underline;
   margin: 25px;
+  font-size: 24px;
 }
 
 .leaderboard p {
@@ -142,32 +159,49 @@ a:link {
   margin-right: 0;
 }
 
+.leaderboard-rank-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 10%;
+  margin-top: 5px;
+}
+
+.leaderboard-size-1 p{
+  font-size: 20px;
+}
+
+.leaderboard-size-2 p{
+  font-size: 16px;
+}
+
 .leaderboard-rank-num {
   margin-left: 12.5%;
 }
 
 .game-area {
   position: fixed;
-  background-color: rgba(255, 255, 255, 1);
   height: 70%;
   bottom: 0;
-  right: 0%; /*changed here to 0*/
-  left: 0%;  /*changed here to 0*/
+  right: 0%;   /*changed here to 0*/
+  left: 0%;   /*changed here to 0*/
   z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  border-top-right-radius: 200px;
   padding-right: 150px;
-  box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32);   /*added shadow to game-area*/
+  border-top-right-radius: 150px;
+  box-shadow: 30px 30px 60px rgba(16, 0, 0, 0.32); /*added shadow to game-area*/
 }
+
 .dots-grp {
-  z-index:100;
-  margin:5% 17% 37% 68%;
+  z-index: 90;
+  margin: 5% 17% 37% 68%;
 }
+
 .table-cell {
-  padding:0.5vh 2vh;
+  padding: 0.5vh 2vh;
 }
 
 .red-sidebar {
@@ -175,7 +209,7 @@ a:link {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 30%;
+  width: 29.5%;
   background-color: #ff1b48;
   z-index: 50;
 }
@@ -188,19 +222,23 @@ a:link {
   bottom: 0;
   left: 0;
   right: 0;
+  
   background-color: white;
   justify-content: space-between;
-  border-top-right-radius: 200px;
-
+  border-top-right-radius: 150px;
+  clip-path: border-box;
 }
+
 
 .background-pattern-grid {
   width: 6%;
   background-color: #ffe5e5;
-  height:40%;
+  height: 40%;
+  
 }
+
 .background-pattern-grid-main {
-  width:6%;
+  width: 6%;
   background-color: #ffe5e5;
   
 }
@@ -209,7 +247,7 @@ a:link {
   background-color: #ff1b48;
   z-index: 500;
   position: fixed;
-  bottom: 15%;
+  bottom: 10%;
   right: -1%;
   height: 45%;
   width: 15%;
@@ -220,31 +258,52 @@ a:link {
 }
 
 .name-input-logo {
-  margin-top: 10%;
+  margin-top: 9%;
   width: 30%;
+}
+
+.name-input-text {
+  margin-top:15%;
+  color:white;
+  font-size: 12px;
 }
 
 .name-input {
   border: none;
+  border-radius:5px;
+  width:80%;
+  margin: 10px;
+  height:30px;
 
+}
+.refresh {
+  width: 78px;
+  height: 77px;
+  margin-top:10%;
+  flex-shrink: 0;
+  border-radius: 23px;
+  background-color:#011E4B;
+}
+.anchorr {
+  position:relative;
+  left:30%;
+  top:40%;
 }
 
 .name-clear-image {
   width: 50px;
 }
 
-.input-clear-button {
-
-}
+.input-clear-button {}
 
 .ieee-logo {
   z-index: 200;
 }
 
 .ieee-logo-img {
-  height: 100px;
+  height: 20%;
   flex-shrink: 0;
-  position: absolute;  
+  position: absolute;
   left: calc(50% - 148px/2);
   top: 50px;
 }
