@@ -6,6 +6,7 @@ let started = false;
 let lightsOutTime = 0;
 let raf;
 let timeout;
+let spacework = true;
 
 
 function formatTime(time) {
@@ -92,24 +93,33 @@ function tap(event) {
   event.preventDefault();
   
   if (started) {
-    end(timeStamp);
     started = false;
+    end(timeStamp);
   }
   else {
-    start();
     started = true;
+    start();
   }
 }
 
-addEventListener('touchstart', tap, {passive: false});
+document.querySelector('.game-area').addEventListener('touchstart', tap, {passive: false});
 
-addEventListener('mousedown', event => {
+document.querySelector('.game-area').addEventListener('mousedown', event => {
   if (event.button === 0) tap(event);
+  spacework = true;
 }, {passive: false});
 
 addEventListener('keydown', event => {
-  if (event.key == ' ') tap(event);
-}, {passive: false});
+   if (event.key == ' ' && spacework) tap(event);},{passive: false});
+
+document.querySelector('.name-input').addEventListener('focus', event => {
+  spacework = false;
+});
+
+document.querySelector('.name-input').addEventListener('blur', event => {
+  spacework = true;
+});
+
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/sw.js');
