@@ -102,8 +102,8 @@ p {
 }
 
 .time {
-  /* font-size: 64px; */
-  font-size: 8vw;
+  font-size: 88px;
+  /* font-size: 8vw; */
   line-height: 1;
   margin: 1rem;
   text-transform: uppercase;
