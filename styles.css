@@ -93,13 +93,13 @@ body {
   transform: translateY(-50%);
 }
 
-p {
+/* p {
   font-size: 18px;
   text-align: center;
   line-height: 1.4;
   margin: 1em;
   margin-bottom: 0;
-}
+} */
 
 .time {
   font-size: 88px;
@@ -145,6 +145,11 @@ a:link {
   display: flex;
   flex-direction: column;
 }
+.bord {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  text-align:center;
+  vertical-align: middle;
+}
 
 .leaderboard-text {
   color: white;
@@ -164,10 +169,47 @@ a:link {
   flex-direction: row;
   justify-content: flex-start;
   padding: 0 10%;
-  margin-top: 5px;
 }
 
-.leaderboard-size-1 p{
+
+.r1 p, .r2 p {
+  height:5vh;
+  margin:5px 0;
+  opacity: 0;
+
+}
+.r3 p, .r4 p {
+  height:4.3vh;
+  margin:0;
+  opacity: 0;
+}
+.r5 p, .r6 p{
+  height:4.1vh;
+  margin:0;
+  opacity: 0;
+}
+.r7 p, .r8 p {
+  height:3.9vh;
+  margin:0;
+  opacity: 0;
+}
+.r9 p, .r10 p {
+  height:3.7vh;
+  margin:0;
+  opacity: 0;
+}
+.r11 p, .r12 p {
+  height:3.5vh;
+  margin:0;
+  opacity: 0;
+}
+.r13 p, .r14 p, .r15 p {
+  height:3.3vh;
+  margin:0;
+  opacity: 0;
+}
+
+/*.leaderboard-size-1 p{
   font-size: 20px;
 }
 
@@ -176,8 +218,8 @@ a:link {
 }
 
 .leaderboard-rank-num {
-  margin-left: 12.5%;
-}
+  margin-left: 12.5px;
+}*/
 
 .game-area {
   position: fixed;
