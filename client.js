@@ -65,15 +65,44 @@ function start() {
   raf = requestAnimationFrame(frame);
 }
 
+function sortLeaderboard() {
+  for (let i = 0; i < leaderboard.length; i++) {
+    for (let j = 0; j < leaderboard.length - i - 1; j++) {
+      if (leaderboard[j].time > leaderboard[j + 1].time) {
+        const temp = leaderboard[j];
+        leaderboard[j] = leaderboard[j + 1];
+        leaderboard[j + 1] = temp;
+      }
+    }
+  }
+}
+
+
+
 function appendToLeaderboard(time) {
   username = document.querySelector('.name-input').value;
-  const score = {username, score: time}; // here check whether user of same name exists, if so, update score if it is lower than current score
+  const score = {username, time}; 
+  let dupname = false;
+  
+  for (let i = 0; i < leaderboard.length; i++) {
+    if (username === leaderboard[i].username) {
+      dupname = true;
+      if (score.time < leaderboard[i].time) {
+        leaderboard[i].time = score.time;
+      } 
+      break;
+    }
+  }
+  // here check whether user of same name exists, if so, update score if it is lower than current score
   // if user with same name doesn't exist, then push score to leaderboard
-  leaderboard.push(score);
-  localStorage.setItem('scores', JSON.stringify(leaderboard));
+  if (!dupname) leaderboard.push(score);
+  
   // sort and keep only top 15 values 
+  sortLeaderboard();  
+  leaderboard = leaderboard.slice(0, 15);
+  
 
-
+  localStorage.setItem('scores', JSON.stringify(leaderboard));
   renderLeaderboard();
 }
 
@@ -104,7 +133,6 @@ function end(timeStamp) {
     time.classList.add('anim');
   }
 }
-
 
 
 function tap(event) {
