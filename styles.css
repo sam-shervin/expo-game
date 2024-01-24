@@ -25,7 +25,7 @@ body {
 }
 
 .large-text {
-  font-size: 16px;
+  font-size: 17px;  /*earlier 16*/
   font-weight: bold;
   position: relative;
   /*added*/
