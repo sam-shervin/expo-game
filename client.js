@@ -107,7 +107,17 @@ function appendToLeaderboard(time) {
 }
 
 function renderLeaderboard() {
-  // change html code to use tables instead of divs in leaderboard section then add this portion. 
+  let i;
+  for (i = 0; i < leaderboard.length; i++) {
+    document.querySelector(`.r${i + 1} .leaderboard-rank-num`).innerHTML = i + 1;
+    document.querySelector(`.r${i + 1} .leaderboard-rank-name`).innerHTML = leaderboard[i].username;
+    document.querySelector(`.r${i + 1} .leaderboard-time`).innerHTML = leaderboard[i].time && leaderboard[i].time + 's';
+  };
+  for (;i < 15; i++) {
+    document.querySelector(`.r${i + 1} .leaderboard-rank-num`).innerHTML = null;
+    document.querySelector(`.r${i + 1} .leaderboard-rank-name`).innerHTML = null;
+    document.querySelector(`.r${i + 1} .leaderboard-time`).innerHTML = null;
+  }
 }
 
 function end(timeStamp) {
@@ -184,3 +194,5 @@ document.querySelector('.name-input').addEventListener('blur', () => {
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/sw.js');
 }
+
+renderLeaderboard();
